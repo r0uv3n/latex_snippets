@@ -1,0 +1,508 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	"one matrix":{
+		"scope": "latex,markdown",
+		"prefix": "@1",
+		"body": "\\mathds{1}"
+	},
+	"timplies": {
+		"scope": "latex,markdown",
+    "prefix": "timpl",
+		"body": "\\timplies"
+	},
+	"implies": {
+		"scope": "latex,markdown",
+    "prefix": "impl",
+		"body": "\\implies"
+	},
+	"quot": {
+		"scope": "latex,markdown",
+    "prefix": "@//",
+		"body": "\\quot{${1:\\cdot}}{${2:\\cdot}}"
+	},
+	"matrixmult": {
+		"scope": "latex,markdown",
+    "prefix": "@..",
+		"body": "\\matrixmult"
+	},
+	"norm": {
+		"scope": "latex,markdown",
+    "prefix": "@||",
+		"body": "\\norm$1{${2:\\cdot}}"
+	},
+	"euclidian norm": {
+		"scope": "latex,markdown",
+    "prefix": "@||E",
+		"body": "\\euclidiannorm$1{${2:\\cdot}}"
+	},
+	"operator norm": {
+		"scope": "latex,markdown",
+    "prefix": "@||op",
+		"body": "\\operatornorm$1{${2:\\cdot}}"
+	},
+	"kebesgue norm": {
+		"scope": "latex,markdown",
+    "prefix": "@||l",
+		"body": "\\lebesguenorm$1{${2:\\cdot}}"
+	},
+	"supremums norm": {
+		"scope": "latex,markdown",
+    "prefix": "@||8",
+		"body": "\\supnorm$1{${2:\\cdot}}"
+	},
+	"maximums norm": {
+		"scope": "latex,markdown",
+    "prefix": "@||m",
+		"body": "\\maxnorm$1{${2:\\cdot}}"
+	},
+	"parens": {
+		"scope": "latex,markdown",
+		"prefix": "@()",
+		"body": "\\p${1:*}{${2:\\cdot}}"
+	},
+	"scalarproduct": {
+		"scope": "latex,markdown",
+    "prefix": "@sc",
+		"body": "\\scalarproduct$1{${2:\\cdot}}{${3:\\cdot}}"
+	},
+	"zeroset": {
+		"scope": "latex,markdown",
+    "prefix": "@00",
+		"body": "\\zeroset"
+	},
+	"forall": {
+		"scope": "latex,markdown",
+    "prefix": "@aa",
+		"body": "\\forall "
+	},
+	"exists": {
+		"scope": "latex,markdown",
+    "prefix": "@ee",
+		"body": "\\exists "
+	},
+	"rationals": {
+		"scope": "latex,markdown",
+    "prefix": "@qq",
+		"body": "\\rationals"
+	},
+	"complexs": {
+		"scope": "latex,markdown",
+    "prefix": "@cc",
+		"body": "\\complexs"
+	},
+	"wholes": {
+		"scope": "latex,markdown",
+    "prefix": "@zz",
+		"body": "\\wholes"
+	},
+	"naturals": {
+		"scope": "latex,markdown",
+    "prefix": "@nn",
+		"body": "\\naturals"
+	},
+	"reals": {
+		"scope": "latex,markdown",
+    "prefix": "@rr",
+		"body": "\\reals"
+	},
+	"qquad": {
+		"scope": "latex,markdown",
+    "prefix": "@tttt",
+		"body": "\\qquad "
+	},
+	"quad": {
+		"scope": "latex,markdown",
+    "prefix": "@ttt",
+		"body": "\\quad "
+	},
+	"logicspace": {
+		"scope": "latex,markdown",
+    "prefix": "@tt",
+		"body": "\\logicspace "
+	},
+	"Begin aligned as subequation": {
+		"scope": "latex,markdown",
+    "prefix": "bals",
+		"body": [
+			"\\begin{aligned}[t]",
+			"\t$1",
+			"\\end{aligned}",
+		]
+	},
+	"Begin gathered as subequation": {
+		"scope": "latex,markdown",
+    "prefix": "bgas",
+		"body": [
+			"\\begin{gathered}[t]",
+			"\t$1",
+			"\\end{gathered}"
+		]
+	},
+	"Begin gather": {
+		"scope": "latex,markdown",
+    "prefix": "bga",
+		"body": [
+			"\\begin{gather}",
+			"\t$1",
+			"\\end{gather}"
+		]
+	},
+	"Begin gather starred": {
+		"scope": "latex,markdown",
+    "prefix": "bsga",
+		"body": [
+			"\\begin{gather*}",
+			"\t$1",
+			"\\end{gather*}"
+		]
+	},
+	"Begin multline": {
+		"scope": "latex,markdown",
+    "prefix": "bmu",
+		"body": [
+			"\\begin{multline}",
+			"\t$1",
+			"\\end{multline}"
+		]
+	},
+	"Begin multline starred": {
+		"scope": "latex,markdown",
+    "prefix": "bmus",
+		"body": [
+			"\\begin{multline*}",
+			"\t$1",
+			"\\end{multline*}"
+		]
+	},
+	"Begin split in equation": {
+		"scope": "latex,markdown",
+    "prefix": "bspeq",
+		"body": [
+			"\\begin{equation}",
+			"\t\\begin{split}",
+			"\t\t$1",
+			"\t\\end{split}",
+			"\\end{equation}"
+		]
+	},
+	"Begin split in equation starred": {
+		"scope": "latex,markdown",
+    "prefix": "bsps",
+		"body": [
+			"\\begin{equation*}",
+			"\t\\begin{split}",
+			"\t\t$1",
+			"\t\\end{split}",
+			"\\end{equation*}"
+		]
+	},
+	// "pi": {
+	// 	"scope": "latex,markdown",
+  //   "prefix": "@P",
+	// 	"body": "\\PI"
+	// },
+	// "e": {
+	// 	"scope": "latex,markdown",
+  //   "prefix": "@E",
+	// 	"body": "\\E"
+	// },
+	// "i": {
+	// 	"scope": "latex,markdown",
+  //   "prefix": "@I",
+	// 	"body": "\\I"
+	// },
+	"factorial": {
+		"scope": "latex,markdown",
+    "prefix": "@!",
+		"body": "\\factorial{${1:\\cdot}}"
+	},
+	"tilde": {
+		"scope": "latex,markdown",
+    "prefix": "@~",
+		"body": "\\tilde{$1}"
+	},
+	"interval": {
+		"scope": "latex,markdown",
+    "prefix": "intv",
+		"body": "\\interval{${1:\\cdot}}{${2:\\cdot}}"
+	},
+	"open interval": {
+		"scope": "latex,markdown",
+    "prefix": "ointv",
+		"body": "\\ointerval{${1:\\cdot}}{${2:\\cdot}}"
+	},
+	"left open interval": {
+		"scope": "latex,markdown",
+    "prefix": "lintv",
+		"body": "\\linterval{${1:\\cdot}}{${2:\\cdot}}"
+	},
+	"right open interval": {
+		"scope": "latex,markdown",
+    "prefix": "rintv",
+		"body": "\\rinterval{${1:\\cdot}}{${2:\\cdot}}"
+	},
+	"abs": {
+		"scope": "latex,markdown",
+    "prefix": "@|",
+		"body": "\\abs$1{${2:\\cdot}}"
+	},
+	"varv": {
+		"scope": "latex,markdown",
+    "prefix": "@vv",
+		"body": "\\varv",
+		"description": "sharp v"
+	},
+	"ell": {
+		"scope": "latex,markdown",
+		"prefix": "@vl",
+		"body": "\\ell",
+		"description": "round v"
+	},
+	"Begin Pmatrix": {
+		"scope": "latex,markdown",
+    "prefix": "bpm",
+		"body": [
+			"\\begin{pNiceMatrix}",
+			"\t$1",
+			"\\end{pNiceMatrix}"
+		],
+		"description": "Insert a pNiceMatrix environment"
+	},
+	"Sum with limits": {
+		"scope": "latex,markdown",
+    "prefix": "suml",
+		"body": "\\sum\\limits_{$1}^{$2}",
+		"description": "Sum over some index"
+	},
+	"Sum with sublimit": {
+		"scope": "latex,markdown",
+    "prefix": "sumsl",
+		"body": "\\sum\\limits_{$1}",
+		"description": "Sum over some index"
+	},
+	"Product": {
+		"scope": "latex,markdown",
+    "prefix": "prod",
+		"body": "\\prod_{$1}^{$2}",
+		"description": "Product over some index"
+	},
+	"Subproduct": {
+		"scope": "latex,markdown",
+    "prefix": "prods",
+		"body": "\\prod_{$1}",
+		"description": "Product over some index"
+	},
+	"Product with limits": {
+		"scope": "latex,markdown",
+    "prefix": "prodl",
+		"body": "\\prod\\limits_{$1}^{$2}",
+		"description": "Product over some index"
+	},
+	"Subproduct with limits": {
+		"scope": "latex,markdown",
+    "prefix": "prodsl",
+		"body": "\\prod\\limits_{$1}",
+		"description": "Product over some index"
+	},
+	"Union": {
+		"scope": "latex,markdown",
+    "prefix": "union",
+		"body": "\\bigcup_{$1}^{$2}",
+		"description": "Union over some index"
+	},
+	"Subnion": {
+		"scope": "latex,markdown",
+    "prefix": "unions",
+		"body": "\\bigcup_{$1}",
+		"description": "Union over some index"
+	},
+	"Union with limits": {
+		"scope": "latex,markdown",
+    "prefix": "unionl",
+		"body": "\\bigcup\\limits_{$1}^{$2}",
+		"description": "Union over some index"
+	},
+	"Subunion with limits": {
+		"scope": "latex,markdown",
+    "prefix": "unionsl",
+		"body": "\\bigcup\\limits_{$1}",
+		"description": "Union over some index"
+	},
+	"Intersection": {
+		"scope": "latex,markdown",
+    "prefix": "intersection",
+		"body": "\\bigcap_{$1}^{$2}",
+		"description": "Intersection over some index"
+	},
+	"Subintersection": {
+		"scope": "latex,markdown",
+    "prefix": "intersections",
+		"body": "\\bigcap_{$1}",
+		"description": "Intersection over some index"
+	},
+	"Intersection with limits": {
+		"scope": "latex,markdown",
+    "prefix": "intersectionl",
+		"body": "\\bigcap\\limits_{$1}^{$2}",
+		"description": "Intersection over some index"
+	},
+	"Subintersection with limits": {
+		"scope": "latex,markdown",
+    "prefix": "intersectionsl",
+		"body": "\\bigcap\\limits_{$1}",
+		"description": "Intersection over some index"
+	},
+	"Limes": {
+		"scope": "latex,markdown",
+    "prefix": "lim",
+		"body": "\\lim_{$1 \\goesto $2}",
+		"description": "Limes"
+	},
+	"Limes with limits": {
+		"scope": "latex,markdown",
+    "prefix": "liml",
+		"body": "\\lim\\limits_{$1 \\goesto $2}",
+		"description": "Limes"
+	},
+	"Limes Inferior": {
+		"scope": "latex,markdown",
+    "prefix": "liminf",
+		"body": "\\liminf_{$1 \\goesto $2}",
+		"description": "Limes Inferior"
+	},
+	"Limes Inferior with limits": {
+		"scope": "latex,markdown",
+    "prefix": "liminfl",
+		"body": "\\liminf\\limits_{$1 \\goesto $2}",
+		"description": "Limes Inferior"
+	},
+	"Limes Superior": {
+		"scope": "latex,markdown",
+    "prefix": "limsub",
+		"body": "\\limsub_{$1 \\goesto $2}",
+		"description": "Limes Superior"
+	},
+	"Limes Superior with limits": {
+		"scope": "latex,markdown",
+    "prefix": "limsupl",
+		"body": "\\limsup\\limits_{$1 \\goesto $2}",
+		"description": "Limes Superior"
+	},
+	"2D Vector": {
+		"scope": "latex,markdown",
+    "prefix": "2vec",
+		"body": "\\begin{pNiceMatrix} $1 \\\\\\\\ $2 \\end{pNiceMatrix}",
+		"description": "2D Vector in one line"
+	},
+	"2D Vector side": {
+		"scope": "latex,markdown",
+    "prefix": "2vecs",
+		"body": "\\begin{pNiceMatrix} $1 & $2 \\end{pNiceMatrix}",
+		"description": "2D Vector in one line"
+	},
+	"2D Vector long": {
+		"scope": "latex,markdown",
+    "prefix": "2vecm",
+		"body": [
+			"\\begin{pNiceMatrix}",
+			"\t$1 \\\\\\\\",
+			"\t$2",
+			"\\end{pNiceMatrix}"
+		],
+		"description": "2D Vector in multiple lines"
+	},
+	"2D Matrix": {
+		"scope": "latex,markdown",
+    "prefix": "2mat",
+		"body": "\\begin{pNiceMatrix} $1 & $2 \\\\\\\\ $3 & $4 \\end{pNiceMatrix}",
+		"description": "2D Matrix in one line"
+	},
+	"2D Matrix long": {
+		"scope": "latex,markdown",
+    "prefix": "2matm",
+		"body": [
+			"\\begin{pNiceMatrix}",
+			"\t$1 & $2 \\\\\\\\",
+			"\t$3 & $4",
+			"\\end{pNiceMatrix}"
+		],
+		"description": "2D Matrix in multiple lines"
+	},
+	"3D Vector": {
+		"scope": "latex,markdown",
+    "prefix": "3vec",
+		"body": "\\begin{pNiceMatrix} $1 \\\\\\\\ $2 \\\\\\\\ $3 \\end{pNiceMatrix}",
+		"description": "3D Vector in one line"
+	},
+	"3D Vector side": {
+		"scope": "latex,markdown",
+    "prefix": "3vecs",
+		"body": "\\begin{pNiceMatrix} $1 & $2 & $3 \\end{pNiceMatrix}",
+		"description": "3D Vector in one line"
+	},
+	"3D Vector long": {
+		"scope": "latex,markdown",
+    "prefix": "3vecm",
+		"body": [
+			"\\begin{pNiceMatrix}",
+			"\t$1 \\\\\\\\",
+			"\t$2 \\\\\\\\",
+			"\t$3",
+			"\\end{pNiceMatrix}"
+		],
+		"description": "3D Vector in multiple lines"
+	},
+	"3D Matrix": {
+		"scope": "latex,markdown",
+    "prefix": "3mat",
+		"body": "\\begin{pNiceMatrix} $1 & $2 & $3 \\\\\\\\ $4 & $5 & $6 \\\\\\\\ $7 & $8 & $9 \\end{pNiceMatrix}",
+		"description": "3D Matrix in one line"
+	},
+	"3D Matrix long": {
+		"scope": "latex,markdown",
+    "prefix": "3matm",
+		"body": [
+			"\\begin{pNiceMatrix}",
+			"\t$1 & $2 & $3 \\\\\\\\",
+			"\t$4 & $5 & $6 \\\\\\\\",
+			"\t$7 & $8 & $9",
+			"\\end{pNiceMatrix}"
+		],
+		"description": "3D Matrix in multiple lines"
+	},
+	"3D System long": {
+		"scope": "latex,markdown",
+    "prefix": "3sysm",
+		"body": [
+			"\\begin{pNiceArray}{CCC|C}[first-col]",
+			"\t& $1 & $2 & $3 & $4 \\\\\\\\",
+			"\t& $5 & $6 & $7 & $8 \\\\\\\\",
+			"\t& $9 & $10 & $11 & $12",
+			"\\end{pNiceArray}"
+		],
+		"description": "3D Matrix in multiple lines"
+	},
+	"basechange": {
+		"scope": "latex,markdown",
+    "prefix": "basechange",
+		"body": "\\basechange{\\mathcal{${1:\\cdot}}}{${2:\\cdot}}{\\mathcal{${3:\\cdot}}}",
+		"description": "basechange with bases in caligraphic font"
+	},
+	"Sum": {
+		"scope": "latex,markdown",
+    "prefix": "sum",
+		"body": "\\sum_{$1}^{$2}",
+		"description": "Sum over some index"
+	},
+	"Subsum": {
+		"scope": "latex,markdown",
+    "prefix": "sums",
+		"body": "\\sum_{$1}",
+		"description": "Sum over some index"
+	},
+}
