@@ -5,10 +5,30 @@
 	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
 	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
 	// Placeholders with the same ids are connected.
+	"dagger": {
+		"scope": "latex,markdown",
+		"prefix": "@++",
+		"body": "\\dagger"
+	},
+	"fraktur":{
+		"scope": "latex,markdown",
+		"prefix": "mfr",
+		"body": "\\mathfrak{$1}"
+	},
 	"one matrix":{
 		"scope": "latex,markdown",
 		"prefix": "@1",
 		"body": "\\mathds{1}"
+	},
+	"tensorproduct":{
+		"scope": "latex,markdown",
+		"prefix": "@o*",
+		"body": "\\tensorproduct"
+	},
+	"directsum":{
+		"scope": "latex,markdown",
+		"prefix": "@o+",
+		"body": "\\directsum"
 	},
 	"timplies": {
 		"scope": "latex,markdown",
@@ -25,6 +45,11 @@
     "prefix": "@//",
 		"body": "\\quot{${1:\\cdot}}{${2:\\cdot}}"
 	},
+	"inverse": {
+		"scope": "latex,markdown",
+		"prefix": "@-1",
+		"body": "\\inverse{${1:\\cdot}}"
+	},
 	"matrixmult": {
 		"scope": "latex,markdown",
     "prefix": "@..",
@@ -34,6 +59,21 @@
 		"scope": "latex,markdown",
     "prefix": "@||",
 		"body": "\\norm$1{${2:\\cdot}}"
+	},
+	"explicit norm": {
+		"scope": "latex,markdown",
+    "prefix": "@||expl",
+		"body": "\\explicitnorm$1{$2}{${3:\\cdot}}"
+	},
+	"p norm": {
+		"scope": "latex,markdown",
+    "prefix": "@||p",
+		"body": "\\pnorm$1{$2}{${3:\\cdot}}"
+	},
+	"frobenius norm": {
+		"scope": "latex,markdown",
+    "prefix": "@||fr",
+		"body": "\\frobeniusnorm$1{${2:\\cdot}}"
 	},
 	"euclidian norm": {
 		"scope": "latex,markdown",
@@ -62,8 +102,8 @@
 	},
 	"parens": {
 		"scope": "latex,markdown",
-		"prefix": "@()",
-		"body": "\\p${1:*}{${2:\\cdot}}"
+		"prefix": "@(",
+		"body": "\\p${1:}{${2:\\cdot}}"
 	},
 	"scalarproduct": {
 		"scope": "latex,markdown",
@@ -90,15 +130,15 @@
     "prefix": "@qq",
 		"body": "\\rationals"
 	},
-	"complexs": {
+	"complexes": {
 		"scope": "latex,markdown",
     "prefix": "@cc",
-		"body": "\\complexs"
+		"body": "\\complexes"
 	},
-	"wholes": {
+	"integers": {
 		"scope": "latex,markdown",
     "prefix": "@zz",
-		"body": "\\wholes"
+		"body": "\\integers"
 	},
 	"naturals": {
 		"scope": "latex,markdown",
@@ -262,6 +302,24 @@
 		"prefix": "@vl",
 		"body": "\\ell",
 		"description": "round v"
+	},
+	"Omega": {
+		"scope": "latex,markdown",
+		"prefix": "@om",
+		"body": "\\Omega",
+		"description": "Capital Omega"
+	},
+	"vektor": {
+		"scope": "latex,markdown",
+		"prefix": "@vk",
+		"body": "\\vektor{$1}",
+		"description": "vektor"
+	},
+	"einheitsvektor": {
+		"scope": "latex,markdown",
+		"prefix": "@evk",
+		"body": "\\einheitsvektor{$1}",
+		"description": "einheitsvektor"
 	},
 	"Begin Pmatrix": {
 		"scope": "latex,markdown",

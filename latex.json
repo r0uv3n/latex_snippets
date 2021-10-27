@@ -12,9 +12,45 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+	"note": {
+		"prefix": "@note",
+		"body": ["\\begin{note}",
+		"\t\\tags{${1|statement,definition|}}",
+    "\t\\begin{plain}",
+		"\t% ID",
+		"\t\t$1:$2",
+    "\t\\end{plain}",
+		"\t% Reference",
+    "\t\\begin{plain}",
+    "\t\t${3|Lemma,Definition,Korollar,Satz,Bemerkung,Beispiel|} in ${4|Kapitel 1: Hilbertscher Nullstellensatz,Kapitel 2: Noethersche, Artimche Ringe und Moduln|}",
+    "\t\\end{plain}",
+		"\t% Text",
+    "\t\\begin{plain}",
+    "\t\t$5",
+    "\t\\end{plain}",
+		"\t% Extra",
+		"\t\\begin{plain}",
+		"\t\t$6",
+		"\t\\end{plain}",
+  "\\end{note}",
+	"",
+	""]
+	},
+	"cloze": {
+		"prefix": "@cl",
+		"body": "{{c$1::${2:${TM_SELECTED_TEXT}}::${3:...}}}"
+	},
+	"Inline math": {
+		"prefix": "inm",
+		"body": "\\( ${1:${TM_SELECTED_TEXT}} \\)"
+	},
+	"Display math": {
+		"prefix": "dm",
+		"body": "\\[ ${1:${TM_SELECTED_TEXT}} \\]"
+	},
 	"enquote": {
 		"prefix": "@en",
-		"body": "\\enquote{$1}"
+		"body": "\\enquote{${1:${TM_SELECTED_TEXT}}}"
 	},
 	"textforall": {
 		"prefix": "@taa",
@@ -23,10 +59,6 @@
 	"textexists": {
 		"prefix": "@tee",
 		"body": "\\texists "
-	},
-	"Inline math": {
-		"prefix": "inm",
-		"body": "\\( $1 \\)"
 	},
 	"New lecture": {
 		"prefix": "NLE",
@@ -42,19 +74,19 @@
 	},
 	"Mathtext": {
 		"prefix": "MTE",
-		"body": "\\text{${1:...}}",
+		"body": "\\text{${1:${TM_SELECTED_TEXT}}}",
 		"description": "Insert mathtext"
 	},
 	"Set": {
 		"prefix": "BSE",
-		"body": "\\Set{${1:...|...}}",
+		"body": "\\set{${1:${TM_SELECTED_TEXT}}}",
 		"description": "Insert a set, we don't use pure braces here!"
 	},
 	"Begin Something": {
 		"prefix": "beg",
 		"body": [
 			"\\begin{${1:...}}",
-			"\t$2",
+			"\t${2:${TM_SELECTED_TEXT}}",
 			"\\end{${1:...}}",
 		],
 		"description": "Insert an environment to be specified"
@@ -62,8 +94,8 @@
 	"Begin Proof": {
 		"prefix": "bpr",
 		"body": [
-			"\\begin{proof}[$1]",
-			"\t$2",
+			"\\begin{proof}",
+			"\t${1:${TM_SELECTED_TEXT}}",
 			"\\end{proof}"
 		],
 		"description": "Insert a proof environment"
@@ -71,8 +103,8 @@
 	"Begin Subroof": {
 		"prefix": "bspr",
 		"body": [
-			"\\begin{subproof}[$1]",
-			"\t$2",
+			"\\begin{subproof}",
+			"\t${1:${TM_SELECTED_TEXT}}",
 			"\\end{subproof}"
 		],
 		"description": "Insert a subproof environment"
@@ -90,7 +122,7 @@
 		"description": "Insert a figure with caption and label"
 	},
 	"Inline Graphic": {
-		"prefix": "inlgr",
+		"prefix": "@inlgr",
 		"body": "\\includegraphics[height=\\baselineskip]{$1}",
 		"description": "Insert a graphic at lineheight"
 	}
