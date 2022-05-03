@@ -63,8 +63,9 @@
 	"New lecture": {
 		"prefix": "NLE",
 		"body": [
-			"% !TEX root = ./Vorlesungsmitschrift ${1:AGLA} 2.tex  ",
-			"\\lecture{${2:Di} $3.$4. 10:15}{$5}"
+			"% !TEX root = ./Vorlesungsmitschrift ${1:Algebraic Geometry 2}.tex  ",
+			"\\DTMsavetimestamp{lecturetime}{$CURRENT_YEAR-$CURRENT_MONTH-${CURRENT_DATE}T$CURRENT_HOUR:15:00Z}",
+			"\\lecture{\\DTMUse{lecturetime}}{$5}"
 		]
 	},
 	"No brace expansion": {
@@ -79,7 +80,7 @@
 	},
 	"Set": {
 		"prefix": "BSE",
-		"body": "\\set{${1:${TM_SELECTED_TEXT}}}",
+		"body": "\\Set$1{${2:${TM_SELECTED_TEXT}}}",
 		"description": "Insert a set, we don't use pure braces here!"
 	},
 	"Begin Something": {

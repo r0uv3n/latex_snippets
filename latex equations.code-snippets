@@ -10,6 +10,11 @@
 		"prefix": "@++",
 		"body": "\\dagger"
 	},
+	"adjoint": {
+		"scope": "latex,markdown",
+		"prefix": "@*t", // since for matrices the adjoint is the conjugate transpose
+		"body": "\\adjoint{${1:${TM_SELECTED_TEXT}}}"
+	},
 	"fraktur":{
 		"scope": "latex,markdown",
 		"prefix": "mfr",
@@ -58,7 +63,7 @@
 	"norm": {
 		"scope": "latex,markdown",
     "prefix": "@||",
-		"body": "\\norm$1{${2:\\cdot}}"
+		"body": "\\norm$1{${2:${TM_SELECTED_TEXT}}}"
 	},
 	"explicit norm": {
 		"scope": "latex,markdown",
@@ -73,46 +78,51 @@
 	"frobenius norm": {
 		"scope": "latex,markdown",
     "prefix": "@||fr",
-		"body": "\\frobeniusnorm$1{${2:\\cdot}}"
+		"body": "\\frobeniusnorm$1{${2:${TM_SELECTED_TEXT}}}"
 	},
 	"euclidian norm": {
 		"scope": "latex,markdown",
     "prefix": "@||E",
-		"body": "\\euclidiannorm$1{${2:\\cdot}}"
+		"body": "\\euclidiannorm$1{${2:${TM_SELECTED_TEXT}}}"
 	},
 	"operator norm": {
 		"scope": "latex,markdown",
     "prefix": "@||op",
-		"body": "\\operatornorm$1{${2:\\cdot}}"
+		"body": "\\operatornorm$1{${2:${TM_SELECTED_TEXT}}}"
 	},
 	"kebesgue norm": {
 		"scope": "latex,markdown",
     "prefix": "@||l",
-		"body": "\\lebesguenorm$1{${2:\\cdot}}"
+		"body": "\\lebesguenorm$1{${2:${TM_SELECTED_TEXT}}}"
 	},
 	"supremums norm": {
 		"scope": "latex,markdown",
     "prefix": "@||8",
-		"body": "\\supnorm$1{${2:\\cdot}}"
+		"body": "\\supnorm$1{${2:${TM_SELECTED_TEXT}}}"
 	},
 	"maximums norm": {
 		"scope": "latex,markdown",
     "prefix": "@||m",
-		"body": "\\maxnorm$1{${2:\\cdot}}"
+		"body": "\\maxnorm$1{${2:${TM_SELECTED_TEXT}}}"
 	},
 	"parens": {
 		"scope": "latex,markdown",
 		"prefix": "@(",
-		"body": "\\p${1:}{${2:\\cdot}}"
+		"body": "\\p${1:}{${2:${TM_SELECTED_TEXT}}}"
 	},
 	"scalarproduct": {
 		"scope": "latex,markdown",
     "prefix": "@sc",
-		"body": "\\scalarproduct$1{${2:\\cdot}}{${3:\\cdot}}"
+		"body": "\\scalarproduct$1{${2:${TM_SELECTED_TEXT}}}{${3:\\cdot}}"
 	},
 	"zeroset": {
 		"scope": "latex,markdown",
     "prefix": "@00",
+		"body": "\\zeroset"
+	},
+	"emptyset": {
+		"scope": "latex,markdown",
+		"prefix": "@s0",
 		"body": "\\zeroset"
 	},
 	"forall": {
@@ -259,12 +269,12 @@
 	"factorial": {
 		"scope": "latex,markdown",
     "prefix": "@!",
-		"body": "\\factorial{${1:\\cdot}}"
+		"body": "\\factorial{${1:${TM_SELECTED_TEXT}}}"
 	},
 	"tilde": {
 		"scope": "latex,markdown",
     "prefix": "@~",
-		"body": "\\tilde{$1}"
+		"body": "\\tilde{${1:${TM_SELECTED_TEXT}}}"
 	},
 	"interval": {
 		"scope": "latex,markdown",
@@ -289,7 +299,7 @@
 	"abs": {
 		"scope": "latex,markdown",
     "prefix": "@|",
-		"body": "\\abs$1{${2:\\cdot}}"
+		"body": "\\abs$1{${2:${TM_SELECTED_TEXT}}}"
 	},
 	"varv": {
 		"scope": "latex,markdown",
@@ -312,24 +322,30 @@
 	"vektor": {
 		"scope": "latex,markdown",
 		"prefix": "@vk",
-		"body": "\\vektor{$1}",
+		"body": "\\vektor{${1:${TM_SELECTED_TEXT}}}",
 		"description": "vektor"
+	},
+	"4vektor": {
+		"scope": "latex,markdown",
+		"prefix": "@4vk",
+		"body": "\\fourvektor{${1:${TM_SELECTED_TEXT}}}",
+		"description": "4vektor"
 	},
 	"einheitsvektor": {
 		"scope": "latex,markdown",
 		"prefix": "@evk",
-		"body": "\\einheitsvektor{$1}",
+		"body": "\\einheitsvektor{${1:${TM_SELECTED_TEXT}}}",
 		"description": "einheitsvektor"
 	},
-	"Begin Pmatrix": {
+	"Begin matrix": {
 		"scope": "latex,markdown",
-    "prefix": "bpm",
+    "prefix": "bmat",
 		"body": [
-			"\\begin{pNiceMatrix}",
-			"\t$1",
-			"\\end{pNiceMatrix}"
+			"\\begin{${1:p}NiceMatrix}",
+			"\t${2:${TM_SELECTED_TEXT}}",
+			"\\end{${1:p}NiceMatrix}"
 		],
-		"description": "Insert a pNiceMatrix environment"
+		"description": "Insert a NiceMatrix environment"
 	},
 	"Sum with limits": {
 		"scope": "latex,markdown",
@@ -477,17 +493,17 @@
 	"2D Matrix": {
 		"scope": "latex,markdown",
     "prefix": "2mat",
-		"body": "\\begin{pNiceMatrix} $1 & $2 \\\\\\\\ $3 & $4 \\end{pNiceMatrix}",
+		"body": "\\begin{${1:p}NiceMatrix} $2 & $3 \\\\\\\\ $4 & $5 \\end{${1:p}NiceMatrix}",
 		"description": "2D Matrix in one line"
 	},
 	"2D Matrix long": {
 		"scope": "latex,markdown",
     "prefix": "2matm",
 		"body": [
-			"\\begin{pNiceMatrix}",
-			"\t$1 & $2 \\\\\\\\",
-			"\t$3 & $4",
-			"\\end{pNiceMatrix}"
+			"\\begin{${1:p}NiceMatrix}",
+			"\t$2 & $3 \\\\\\\\",
+			"\t$4 & $5",
+			"\\end{${1:p}NiceMatrix}"
 		],
 		"description": "2D Matrix in multiple lines"
 	},
@@ -518,18 +534,18 @@
 	"3D Matrix": {
 		"scope": "latex,markdown",
     "prefix": "3mat",
-		"body": "\\begin{pNiceMatrix} $1 & $2 & $3 \\\\\\\\ $4 & $5 & $6 \\\\\\\\ $7 & $8 & $9 \\end{pNiceMatrix}",
+		"body": "\\begin{${1:p}NiceMatrix} $2 & $3 & $4 \\\\\\\\ $5 & $6 & $7 \\\\\\\\ $8 & $9 & $10 \\end{${1:p}NiceMatrix}",
 		"description": "3D Matrix in one line"
 	},
 	"3D Matrix long": {
 		"scope": "latex,markdown",
     "prefix": "3matm",
 		"body": [
-			"\\begin{pNiceMatrix}",
-			"\t$1 & $2 & $3 \\\\\\\\",
-			"\t$4 & $5 & $6 \\\\\\\\",
-			"\t$7 & $8 & $9",
-			"\\end{pNiceMatrix}"
+			"\\begin{${1:p}NiceMatrix}",
+			"\t$2 & $3 & $4 \\\\\\\\",
+			"\t$5 & $6 & $7 \\\\\\\\",
+			"\t$8 & $9 & $10",
+			"\\end{${1:p}NiceMatrix}"
 		],
 		"description": "3D Matrix in multiple lines"
 	},
